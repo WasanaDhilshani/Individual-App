@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_above="@id/options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <EditText
+                android:id="@+id/sourceLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter English Text"
+                android:minHeight="100dp"
+                android:gravity="start"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/destinationLangugage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text=""
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/translateBtn" >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sourceLanguageChooseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+            app:cornerRadius="10dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/baseline_arrow_forward_24"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/destinationLanguageChooseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tamil"
+            app:cornerRadius="10dp"
+            android:layout_weight="1" />
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/translateBtn"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/translate"
+        android:text="Translate" />
+
+</RelativeLayout>
